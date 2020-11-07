@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<title>PRANA - login</title>
+	<link rel="stylesheet" type="text/css" href="../estilos/estilo-login.css">
+	<script src="../scripts/login-js.js" charset="utf-8" defer></script>
+</head>
+
+<body>
+	<div class="faded">
+		<div class="form-box">
+
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Ingreso</button>
+				<button type="button" class="toggle-btn" onclick="register()">Registro</button>
+			</div>
+
+			<form id="login" class="input-group" action="validacion.php" method="post">
+				<input type="text" class="input-field" placeholder="Usuario" name="user" required>
+				<input type="password" class="input-field" placeholder="Contraseña" name="password" required>
+				<input type="checkbox" class="check-box"><span>Olvidé mi contraseña.</span>
+				<button type="submit" class="submit-btn">Ingresar</button>
+			</form>
+
+			<form id="register" class="input-group-2" action="registrar.php" method="post">
+				<input type="text" class="input-field" placeholder="Usuario" name="user" required>
+				<input list="identification-card" class="input-field" name="identification-card" placeholder="Seleccione su tipo de documento" required>
+				<datalist id="identification-card">
+					<option value="Cédula de ciudadania">
+					<option value="Tarjeta de identidad">
+					<option value="Cédula de extranjeria">
+					<option value="Permiso especial de permanencia">
+					<option value="Pasaporte">
+				</datalist>
+				<input type="text" class="input-field" placeholder="Número de documento" name="identification-number" required>
+				<input type="text" class="input-field" placeholder="Dirección" name="address" required>
+				<input type="text" class="input-field" placeholder="Telefono" name="phone" required>
+				<input type="password" class="input-field" placeholder="Contraseña" name="password" required>
+				<input type="email" class="input-field" placeholder="Correo electrónico" name="email" required>
+				<input id="test" type="checkbox" class="check-box"><span>Acepto los terminos y condiciones.
+				</span>
+				<button type="submit" class="submit-btn">Registrar</button>
+			</form>
+
+		</div>
+	</div>
+
+</body>
+
+</html>
